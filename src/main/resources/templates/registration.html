@@ -13,8 +13,7 @@
 		</style>
 	</head>
 	<body>
-		<div style="color: red">#{credentialsError}</div>
-		<form action="/login" method="post">
+		<form action="/register" method="post">
 			<table>
 				<tr>
 					<td>Username:</td>
@@ -22,16 +21,24 @@
 					<td><span style="color: red">#{usernameError}</span></td>
 				</tr>
 				<tr>
-					<td>Password:</td>
-					<td><input type="password" name="password" id="password" value="ameed"></td>
+					<td>Password</td>
+					<td><input type="password" name="password1" id="password1" value="ameed"></td>
 					<td><span style="color: red">#{passwordError}</span></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="submit" value="Login"></td>
+					<td>Confirm Password</td>
+					<td><input type="password" name="password2" id="password2" value="ameed"></td>
+					<td><span style="color: red">#{passwordsMismatchError}</span></td>
+				</tr>
+				<tr>
+					<td>Age</td>
+					<td><input type="number" name="age" id="age" value="43"></td>
+					<td><span style="color: red">#{ageError}</span></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Register"></td>
 				</tr>
 			</table>
 		</form>
-
-		<a href="/register">Registration</a>
 	</body>
 </html>
